@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.navbar{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+.home-head h1{
+  margin-top: 20px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.pair-img {
+  max-width: 400px;  
+}
