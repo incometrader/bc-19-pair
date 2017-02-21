@@ -8,7 +8,6 @@ var firebase      = require('firebase');
 var dotenv        = require('dotenv');
 
 var index         = require('./routes/index');
-var users         = require('./routes/users');
 var pair          = require('./routes/pair');
 var signIn        = require('./routes/signIn');
 
@@ -28,7 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/pair', pair);
 app.use('/signIn', signIn);
 

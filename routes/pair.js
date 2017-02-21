@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET Pair Page */
-router.get('/pair', function(req, res, next) {
-  res.render('pair', { title: 'DevsPair' });
+/* GET Pair page */
+router.get('/', function(req, res, next) {
+  res.render('pair');
 });
 
 module.exports = router;
