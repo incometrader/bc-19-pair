@@ -4,13 +4,15 @@ body {
 }
 
 .navbar{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #f8f8f8;
 }
 
-.home-head h1{
-  margin-top: 20px;
+.home-head {
+  padding-top: 200px;
+  font-family: bold 2em 'Merriweather Sans', sans-serif;
+  color: white;
 }
 
 a {
@@ -19,4 +21,13 @@ a {
 
 .pair-img {
   max-width: 400px;  
+}
+
+.full {
+  background:url(/images/bgrd.jpg);
+  height:600px;
+}
+
+#about h1 {
+  padding: 20px;
 }

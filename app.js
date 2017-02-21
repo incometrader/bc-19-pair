@@ -1,15 +1,19 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var firebase = require('firebase');
+var express       = require('express');
+var path          = require('path');
+var favicon       = require('serve-favicon');
+var logger        = require('morgan');
+var cookieParser  = require('cookie-parser');
+var bodyParser    = require('body-parser');
+var firebase      = require('firebase');
+var dotenv        = require('dotenv');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index         = require('./routes/index');
+var users         = require('./routes/users');
+var pair          = require('./routes/pair');
+var signIn        = require('./routes/signIn');
 
 var app = express();
+dotenv.config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/pair', pair);
+app.use('/signIn', signIn);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,13 +50,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var config = {
-    apiKey: "AIzaSyDr7zT513OZY1RTSfOcSbCLMWOwFKe0Ecc",
-    authDomain: "bc-19-pair.firebaseapp.com",
-    databaseURL: "https://bc-19-pair.firebaseio.com",
-    storageBucket: "bc-19-pair.appspot.com",
-    messagingSenderId: "1046714437336"
-  };
-  firebase.initializeApp(config);
+// var config = {
+//   apiKey: "AIzaSyDr7zT513OZY1RTSfOcSbCLMWOwFKe0Ecc",
+//   authDomain: "bc-19-pair.firebaseapp.com",
+//   databaseURL: "https://bc-19-pair.firebaseio.com",
+//   storageBucket: "bc-19-pair.appspot.com",
+//   messagingSenderId: "1046714437336"
+//   };
+//   firebase.initializeApp(config);
 
 module.exports = app;
