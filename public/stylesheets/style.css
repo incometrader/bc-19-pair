@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -10,8 +9,9 @@ body {
 }
 
 .home-head {
-  padding-top: 200px;
-  font-family: bold 2em 'Merriweather Sans', sans-serif;
+  padding-top: 180px;
+  font: bold 2em 'Merriweather Sans', sans-serif;
+  line-height: 4;
   color: white;
 }
 
@@ -24,10 +24,42 @@ a {
 }
 
 .full {
-  background:url(/images/bgrd.jpg);
-  height:600px;
+  background: url('/images/bgrd.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 0;
+  height: 100vh;
+  z-index:-9999999;
+  top:0;
 }
 
 #about h1 {
-  padding: 20px;
+  padding: 40px;
 }
+
+.login-form {
+  padding-top: 50px;
+  margin: auto;
+  width: 400px;
+}
+
+.surround {
+background: url('/images/bgrd.jpg');
+height: 100vh;
+}
+
+.surround h1 {
+  margin-top: 150px;
+  color: white;
+}
+
+#firebaseui-auth-container {
+  
+}
+
+
+/*.firepad {
+  width: 700px;
+  height: 450px;
+  background-color: #f62;
+}*/
