@@ -79,4 +79,9 @@ height: 100vh;
   width: 700px;
   height: 450px;
   background-color: #f62;
+  position: absolute;
+  top: 25%;
+  right: 1%;
+  bottom: 2%;
+  left: 20%;
 }*/

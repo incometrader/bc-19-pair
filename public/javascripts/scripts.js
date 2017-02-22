@@ -1,11 +1,11 @@
-window.onload = function() {
-  var config = {
-    apiKey: "AIzaSyDr7zT513OZY1RTSfOcSbCLMWOwFKe0Ecc",
-    authDomain: "bc-19-pair.firebaseapp.com",
-    databaseURL: "https://bc-19-pair.firebaseio.com",
-    storageBucket: "bc-19-pair.appspot.com",
-    messagingSenderId: "1046714437336"
-  };
+window.onload = function () {
+	var config = {
+		apiKey: "AIzaSyDr7zT513OZY1RTSfOcSbCLMWOwFKe0Ecc",
+		authDomain: "bc-19-pair.firebaseapp.com",
+		databaseURL: "https://bc-19-pair.firebaseio.com",
+		storageBucket: "bc-19-pair.appspot.com",
+		messagingSenderId: "1046714437336"
+	};
 
 	firebase.initializeApp(config);
 
@@ -42,7 +42,8 @@ window.onload = function() {
 
 // check if user is signed in
   firebase.auth().onAuthStateChanged(function(user) {
-		console.log(user)
+		console.log(user);
+		
 	});
-  
+
 };
