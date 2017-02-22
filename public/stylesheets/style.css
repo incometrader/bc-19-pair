@@ -53,10 +53,27 @@ height: 100vh;
   color: white;
 }
 
-#firebaseui-auth-container {
-  
+#editor { 
+  position: absolute;
+  top: 25%;
+  right: 1%;
+  bottom: 2%;
+  left: 20%;
 }
 
+.sidebar {
+  position: absolute;
+  margin: 0;
+  width: 15%;
+  height: 100%;
+  background-color: cadetblue;
+}
+
+#new-session {
+  position: absolute;
+  top: 16%;
+  left: 20%;
+}
 
 /*.firepad {
   width: 700px;
