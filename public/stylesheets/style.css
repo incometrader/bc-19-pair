@@ -5,7 +5,7 @@ body {
 .navbar{
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #f8f8f8;
+  background-color: transparent; /*#f8f8f8;*/
 }
 
 .home-head {
@@ -53,12 +53,13 @@ height: 100vh;
   color: white;
 }
 
-#editor { 
+ #firepad-container {
+  margin-top: 15%;
+  margin-left: 19%;
+  width: 900px;
+  height: 450px;
   position: absolute;
-  top: 25%;
-  right: 1%;
-  bottom: 2%;
-  left: 20%;
+  border: 1px solid black;
 }
 
 .sidebar {
@@ -66,7 +67,7 @@ height: 100vh;
   margin: 0;
   width: 15%;
   height: 100%;
-  background-color: cadetblue;
+  background-color: transparent;
 }
 
 #new-session {
@@ -75,13 +76,9 @@ height: 100vh;
   left: 20%;
 }
 
-/*.firepad {
-  width: 700px;
-  height: 450px;
-  background-color: #f62;
+#link-share {
   position: absolute;
-  top: 25%;
-  right: 1%;
-  bottom: 2%;
-  left: 20%;
-}*/
+  top: 18%;
+  left: 40%;
+}
+

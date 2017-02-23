@@ -1,32 +1,10 @@
 {
   "root": true,
-  "extends": "airbnb-base",
+  "extends": "eslint-config-airbnb-es5",
   "env": {
     "node": true,
-    "es6": true,
-    "mocha": true
-  },
-  "parserOptions": {
-     "ecmaVersion": 6,
-     "sourceType": "module",
-     "allowImportExportEverywhere": true
-  },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": false,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true
+    "mocha": true,
+    "browser": true
   },
   "rules": {
     "max-depth": [2, 80],
@@ -39,27 +17,6 @@
     "comma-dangle": 0,
     "curly": [1, "multi-line"],
     "no-multi-spaces": [2, {"exceptions": {"ImportDeclaration": true}}],
-    "import/no-extraneous-dependencies": [
-      "error", 
-      {
-        "devDependencies": true, 
-        "optionalDependencies": false, 
-        "peerDependencies": false
-      }
-    ],
-    "no-shadow": [1, { "allow": ["req", "res", "err"] }],
-    "require-jsdoc": [1, {
-      "require": {
-        "FunctionDeclaration": true,
-        "MethodDefinition": true,
-        "ClassDeclaration": true
-      }
-    }],
-    "valid-jsdoc": [1, {
-      "requireReturn": true,
-      "requireReturnType": true,
-      "requireParamDescription": false,
-      "requireReturnDescription": true
-    }]
+    "no-shadow": [1, { "allow": ["req", "res", "err"] }]
   }
 }

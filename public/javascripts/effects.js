@@ -1,6 +1,6 @@
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/twilight");
-editor.getSession().setMode("ace/mode/javascript");
+// var editor = ace.edit("editor");
+// editor.setTheme("ace/theme/twilight");
+// editor.getSession().setMode("ace/mode/javascript");
 
 // var newSession = document.getElementById("new-session");
 // newSession.addEventListener("click", function(){
@@ -14,24 +14,21 @@ editor.getSession().setMode("ace/mode/javascript");
 
 
 
-var firepadRef = firebase.database().ref();
-var firepad = Firepad.fromACE(firepadRef, editor);
+// function signOut(){
+//   firebase.auth().signOut();
+// }
 
-function signOut(){
-  firebase.auth().signOut();
-}
+// function Pair(){
 
-function Pair(){
-
-}
+// }
 
 
 
 
-$('#about-anchor').click(function() {
-  $('html, body').animate({
-    scrollTop: $( $(this).attr('href') ).offset().top
-    }, 900);
-    return false;
-});
+// $('#about-anchor').click(function() {
+//   $('html, body').animate({
+//     scrollTop: $( $(this).attr('href') ).offset().top
+//     }, 900);
+//     return false;
+// });
 
