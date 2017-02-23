@@ -9,7 +9,11 @@ window.onload = function windowLoad() {
   };
 
 	firebase.initializeApp(config);
-
+	editorLink = localStorage.getItem("userAddress");
+	// if (editorLink){
+	// 	alert(editorLink);
+	// }
+  var signInRedirect = editorLink ? editorLink : '/pair';
 	// FirebaseUI config.
 	var uiConfig = {
 		// Query parameter name for mode.
@@ -18,7 +22,7 @@ window.onload = function windowLoad() {
 		'queryParameterForSignInSuccessUrl': 'signInSuccessUrl',
 		// Will use popup for IDP Providers sign-in flow instead of the default, redirect.
 		'signInFlow': 'popup',
-		'signInSuccessUrl': '/pair',
+		'signInSuccessUrl': signInRedirect,
 		'signInOptions': [
 			// Leave the lines as is for the providers you want to offer your users.
 			firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -53,13 +57,6 @@ window.onload = function windowLoad() {
 	firebase.auth().onAuthStateChanged(function (user) {
 		window.localStorage.user = user;
 	});
-  // assign this function to signout button click
-  // firebase.auth().signOut().then(function() {
-	// 	window.localStorage.user = undefined;
-	// 	console.log('Signed Out');
-	// }, function(error) {
-	// 	console.error('Sign Out Error', error);
-	// });
 
 	function firePadInit() {
 		// Get Firebase Database reference.
@@ -103,11 +100,11 @@ window.onload = function windowLoad() {
 	}
 
 	if (window.location.pathname.indexOf('/pair') !== -1) {
-		if (window.localStorage.user ){
+		if (window.localStorage.user){
 			firePadInit();
 		} else {
-			window.location.href = "http://www.google.com";
-		
+			window.location.href = "/login";
+			localStorage.setItem("userAddress", window.location.href);
 		}
 	}
 
@@ -116,11 +113,19 @@ window.onload = function windowLoad() {
 		firebase.auth().signOut().then(function() {
 			window.localStorage.user = undefined;
 			console.log('Signed Out');
+			alert("You have signed out")
+			window.location = "/";
 		}, function(error) {
 			console.error('Sign Out Error', error);
 		});
 	}
-	
-
-
+	/*function notLoggedIn(){
+		var notAUser = document.getElementById("signout-home");
+		notAUser.innerHTML = <div class="alert alert-warning alert-dismissible" role="alert">
+  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	You are not logged ln. Please log in to continue;
+		</div>;
+		console.log("You are not a user");
+	}
+	*/
 };
