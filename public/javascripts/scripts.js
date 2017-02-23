@@ -26,7 +26,7 @@ window.onload = function windowLoad() {
 			firebase.auth.EmailAuthProvider.PROVIDER_ID
 		],
 		// Terms of service url.
-		'tosUrl': '/about',
+		'tosUrl': '/',
 		'callbacks': {
 			'signInSuccess': function (currentUser, credential, redirectUrl) {
 				window.localStorage.user = currentUser;
@@ -102,9 +102,25 @@ window.onload = function windowLoad() {
 		return ref;
 	}
 
-	if (window.location.pathname === '/pair' && window.localStorage.user) {
-		firePadInit();
-	} else {
-		// you are not logged in
+	if (window.location.pathname.indexOf('/pair') !== -1) {
+		if (window.localStorage.user ){
+			firePadInit();
+		} else {
+			window.location.href = "http://www.google.com";
+		
+		}
 	}
+
+	document.getElementById("signout-nav").addEventListener("click", signOut);
+	function signOut(){
+		firebase.auth().signOut().then(function() {
+			window.localStorage.user = undefined;
+			console.log('Signed Out');
+		}, function(error) {
+			console.error('Sign Out Error', error);
+		});
+	}
+	
+
+
 };

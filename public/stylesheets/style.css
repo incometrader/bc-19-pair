@@ -5,7 +5,11 @@ body {
 .navbar{
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: transparent; /*#f8f8f8;*/
+  background-color: transparent;
+}
+
+.navbar a {
+  color: white;
 }
 
 .home-head {
@@ -20,13 +24,12 @@ a {
 }
 
 .pair-img {
-  max-width: 400px;  
+  width: 500px;  
 }
 
 .full {
   background: url('/images/bgrd.jpg');
   background-size: cover;
-  background-attachment: fixed;
   background-position: 0 0;
   height: 100vh;
   z-index:-9999999;
@@ -34,7 +37,14 @@ a {
 }
 
 #about h1 {
-  padding: 40px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  font: bold 2em 'Merriweather Sans', sans-serif;
+}
+
+#about h4 {
+  font: bold 1.5em 'Merriweather Sans', sans-serif;
+  padding: 10px;
 }
 
 .login-form {
@@ -43,42 +53,52 @@ a {
   width: 400px;
 }
 
-.surround {
-background: url('/images/bgrd.jpg');
-height: 100vh;
-}
-
-.surround h1 {
-  margin-top: 150px;
+#login-head {
   color: white;
 }
 
  #firepad-container {
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 19%;
   width: 900px;
   height: 450px;
-  position: absolute;
+  position: fixed;
   border: 1px solid black;
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
+  left: 0;
   margin: 0;
+  top: 0;
+  z-index: -1;
   width: 15%;
   height: 100%;
-  background-color: transparent;
+  background-color: dodgerblue;
 }
 
 #new-session {
-  position: absolute;
+  position: fixed;
   top: 16%;
   left: 20%;
+  background: dodgerblue;
+  color: ghostwhite;
+  font-weight: bold;
 }
 
 #link-share {
-  position: absolute;
+  position: fixed;
   top: 18%;
-  left: 40%;
+  left: 45%;
 }
 
+#signout-nav {
+  cursor: pointer;
+}
+
+footer {
+  background-color: lightsteelblue;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}

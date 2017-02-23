@@ -10,7 +10,8 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
   </head>
   <body>
-  <nav class="navbar navbar-fixed-top">
+<div class="full">
+  <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-target">
@@ -23,10 +24,10 @@
     <div class="navbar-collapse collapse" id="nav-target">
       <ul class="nav navbar-nav navbar-right">
         <li><a class="nav-link" id="home-nav" href="/">HOME</a></li>
-        <li><a class="nav-link" id="about-nav" href="#about">ABOUT</a></li>
+        <li><a class="nav-link" id="about-nav" href="/#about">ABOUT</a></li>
         <li><a class="nav-link" id="login-nav" href="/login">SIGN IN</a></li> 
         <li><a class="nav-link" id="signup-nav" href="/login">SIGN UP</a></li>
-        <li><a class="nav-link" id="signout-nav" onclick="signOut()">SIGN OUT</a></li>
+        <li><a class="nav-link" id="signout-nav" onclick="signOut()" a>SIGN OUT</a></li>
           
       </ul>
     </div>  
