@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<%='/'%>"> Dev<strong>Pair</strong></a>
+          <a class="navbar-brand nav-link"  href="/"> Dev<strong>Pair</strong></a>
         </div>
         <div class="navbar-collapse collapse" id="nav-target">
           <ul class="nav navbar-nav navbar-right">
@@ -27,22 +27,35 @@
             <li><a class="nav-link" id="about-nav" href="/#about">ABOUT</a></li>
             <li><a class="nav-link" id="login-nav" href="/login">SIGN IN</a></li> 
             <li><a class="nav-link" id="signup-nav" href="/login">SIGN UP</a></li>
+            <li><a class="nav-link" id="pair-nav" href="/pair">EDITOR</a></li>
             <li><a class="nav-link" id="signout-nav">SIGN OUT</a></li>     
           </ul>
         </div>  
       </div>
     </nav>
 
-<div class="pair-full">
+<div class="sidebar">
+<!--
+<button type="button" id="code-btn" class="btn btn-info btn-lg btn-block">Code</button>
+<button type="button" id="chat-btn" class="btn btn-info btn-lg btn-block">Chat</button>
+-->
+</div> 
+
+<div id="pair1">
   <div class="container-fluid">
-  <div class="signout-pair"></div>
     <div class="pan">
-      <div class="sidebar"></div> 
+      
       <a href="/pair" id="new-session" class="btn"> CREATE NEW SESSION </a> 
       <span id="link-share">Share this link to pair: <a href="#" id="pairURL"></a></span>
       <div id="firepad-container"></div>   
     </div>
   </div>
 </div>
-
+<!--
+<div id="pair2">
+   <div class="container-fluid">
+      <div id ="firechat-wrapper"></div>
+   <div class="container-fluid">
+</div>
+-->
 <% include ./partials/footer %>

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Firepad -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
     <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
     <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
@@ -21,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<%='/'%>"> Dev<strong>Pair</strong></a>
+          <a class="navbar-brand"  href="/"> Dev<strong>Pair</strong></a>
         </div>
         <div class="navbar-collapse collapse" id="nav-target">
           <ul class="nav navbar-nav navbar-right">
@@ -29,7 +30,8 @@
             <li><a class="nav-link" id="about-nav" href="/#about">ABOUT</a></li>
             <li><a class="nav-link" id="login-nav" href="/login">SIGN IN</a></li> 
             <li><a class="nav-link" id="signup-nav" href="/login">SIGN UP</a></li>
-            <li><a class="nav-link" id="signout-nav" onclick="signOut()">SIGN OUT</a></li>       
+            <li><a class="nav-link" id="pair-nav" href="/pair">EDITOR</a></li>
+            <li><a class="nav-link" id="signout-nav">SIGN OUT</a></li>       
           </ul>
         </div>  
       </div>
@@ -39,7 +41,7 @@
 
 	<div class="main-login-page">
     <div id="nonuser-alert"></div>
-		<h1 class="text-center" id="login-head">Sign In</h1>
+		<h1 class="text-center" id="login-head">Sign In To Pair</h1>
 		<div class="login-info">
 			<div class="login-form">  
 				<div class="login-agileits-top">

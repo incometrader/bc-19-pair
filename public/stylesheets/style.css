@@ -19,6 +19,10 @@ body {
   color: white;
 }
 
+.home-images {
+  background-color: dodgerblue;
+}
+
 a {
   color: #00B7FF;
 }
@@ -39,12 +43,17 @@ a {
 #about h1 {
   margin-top: 200px;
   margin-bottom: 50px;
-  font: bold 2em 'Merriweather Sans', sans-serif;
+  font: bold 2.5em 'Merriweather Sans', sans-serif;
+  color: dimgrey;
 }
 
 #about h4 {
   font: bold 1.5em 'Merriweather Sans', sans-serif;
   padding: 10px;
+}
+
+.addpad {
+  padding: 20px;
 }
 
 .login-form {
@@ -66,6 +75,15 @@ a {
   border: 1px solid black;
 }
 
+#firechat-wrapper {
+  margin-top: 5%;
+  margin-left: 19%;
+  width: 900px;
+  height: 450px;
+  position: fixed;
+  border: 1px solid black;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -74,14 +92,19 @@ a {
   z-index: -1;
   width: 15%;
   height: 100%;
-  background-color: dodgerblue;
+  background-color: darkblue;
+}
+
+.sidebar button{
+ margin-top: 87px;
+ border-radius: 0;
 }
 
 #new-session {
   position: fixed;
   top: 16%;
   left: 20%;
-  background: dodgerblue;
+  background: darkblue;
   color: ghostwhite;
   font-weight: bold;
 }
@@ -96,9 +119,36 @@ a {
   cursor: pointer;
 }
 
+#editor-btn {
+  position: fixed;
+  left: 0;
+  margin: 0;
+  top: 12.5%;
+  width: 15%;
+  height: 10%;
+  background-color: ghostwhite;
+  color: black;
+}
+#chat-btn {
+  position: fixed;
+  left: 0;
+  margin: 0;
+  top: 22%;
+  width: 15%;
+  height: 10%;
+  background-color: ghostwhite;
+  color: black;
+}
+
 footer {
-  background-color: lightsteelblue;
+  background-color: dodgerblue;
   padding: 20px;
   margin: 0;
   text-align: center;
+}
+
+@media(max-width:768px){
+  .home-head {
+    padding-top: 100px;
+  }
 }
